@@ -2,16 +2,27 @@ const express = require('express');
 const mysql = require('mysql2');
 const session = require('express-session');
 const path = require('path');
+require('dotenv').config(); // 👈 Importamos dotenv
 
 const app = express();
-const PORT = process.env.PORT || 3000; // ⚡ Railway/Render asignan el puerto
+const PORT = process.env.PORT || 3000; // ⚡ Railway asigna el puerto automáticamente
 
 // ================= Configuración DB =================
 const db = mysql.createConnection({
     host: process.env.DB_HOST || 'localhost',
     user: process.env.DB_USER || 'root',
     password: process.env.DB_PASSWORD || 'bardales1804',
-    database: process.env.DB_NAME || 'colegio_reportes'
+    database: process.env.DB_NAME || 'colegio_reportes',
+    port: process.env.DB_PORT || 3306
+});
+
+// Probar conexión
+db.connect(err => {
+    if (err) {
+        console.error("❌ Error al conectar con la base de datos:", err);
+        return;
+    }
+    console.log("✅ Conectado a la base de datos MySQL");
 });
 
 // ================= Middlewares =================
@@ -218,5 +229,5 @@ app.get("/api/reportes-grado/:grado/fecha/:fecha", (req, res) => {
 
 // ================= Servidor =================
 app.listen(PORT, () => {
-    console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
+    console.log(`🚀 Servidor corriendo en puerto ${PORT}`);
 });
