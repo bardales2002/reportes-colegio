@@ -4,14 +4,14 @@ const session = require('express-session');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000; // ⚡ Railway/Render asignan el puerto
 
 // ================= Configuración DB =================
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'bardales1804',
-    database: 'colegio_reportes'
+    host: process.env.DB_HOST || 'localhost',
+    user: process.env.DB_USER || 'root',
+    password: process.env.DB_PASSWORD || 'bardales1804',
+    database: process.env.DB_NAME || 'colegio_reportes'
 });
 
 // ================= Middlewares =================
@@ -122,7 +122,7 @@ app.post("/api/reportes", (req, res) => {
     const { codigo, reporte } = req.body;
     
     // Fecha/hora Guatemala
-    const fechaGuatemala = new Date().toLocaleString("sv-SE", { timeZone: "America/Guatemala" }); 
+    const fechaGuatemala = new Date().toLocaleString("sv-SE", { timeZone: "America/Guatemala" });
 
     const sql = "INSERT INTO reportes (codigo, reporte, fecha) VALUES (?, ?, ?)";
     db.query(sql, [codigo, reporte, fechaGuatemala], (err) => {
@@ -215,7 +215,6 @@ app.get("/api/reportes-grado/:grado/fecha/:fecha", (req, res) => {
     }
   );
 });
-
 
 // ================= Servidor =================
 app.listen(PORT, () => {
