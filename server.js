@@ -131,17 +131,17 @@ app.delete("/api/alumnos/:codigo", (req, res) => {
 // Crear reporte
 app.post("/api/reportes", (req, res) => {
     const { codigo, reporte } = req.body;
-    
-    // Fecha/hora Guatemala
-    const fechaGuatemala = new Date().toLocaleString("sv-SE", { timeZone: "America/Guatemala" });
+
+    // Fecha/hora Guatemala en formato MySQL
+    const fechaGuatemala = new Date().toISOString().slice(0, 19).replace('T', ' ');
 
     const sql = "INSERT INTO reportes (codigo, reporte, fecha) VALUES (?, ?, ?)";
     db.query(sql, [codigo, reporte, fechaGuatemala], (err) => {
         if (err) {
-            console.error("❌ Error insertando reporte:", err);
-            return res.json({ success: false, error: err });
+            console.error("❌ Error insertando reporte:", err.sqlMessage || err);
+            return res.status(500).json({ success: false, error: err.sqlMessage });
         }
-        res.json({ success: true });
+        res.json({ success: true, message: "Reporte agregado correctamente" });
     });
 });
 
