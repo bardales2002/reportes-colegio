@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ef8d24 0%, #fda085 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.back-btn {
+  align-self: flex-start;
+  margin: 15px;
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.back-btn:hover {
+  background: #555;
+}
+
+h1 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.alumno-container {
+  margin-top: 20px;
+  width: 90%;
+  max-width: 900px;
+  background: #fff7d6;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.2);
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+select, input[type="date"], button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+button {
+  background: orange;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: darkorange;
+}
+
+.tabla-container {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background: #f4c542;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background: #fff2cc;
+}
+
+tr:hover {
+  background: #ffe08a;
+}

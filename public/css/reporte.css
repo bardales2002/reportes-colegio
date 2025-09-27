@@ -1,0 +1,52 @@
+/* Estilos específicos para reportes */
+
+.reporte-container {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 800px;
+  background: #fff7d6;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+#reporteForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#reporteForm select,
+#reporteForm textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#reporteForm textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+#reporteForm button {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+#reporteForm button:hover {
+  background: darkorange;
+}

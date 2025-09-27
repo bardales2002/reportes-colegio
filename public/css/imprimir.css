@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ef8d24 0%, #fda085 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.back-btn {
+  align-self: flex-start;
+  margin: 15px;
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.back-btn:hover {
+  background: #555;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.grado-container, 
+.reporte-container {
+  margin-top: 20px;
+  width: 90%;
+  max-width: 900px;
+  background: #fff7d6;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.2);
+}
+
+.grado-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.grado-card {
+  background: orange;
+  color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.grado-card:hover {
+  background: darkorange;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+select, input[type="date"], button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+button {
+  background: orange;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: darkorange;
+}
+
+.acciones-exportar {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.acciones-exportar button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.tabla-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+th {
+  background: #f4c542;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background: #fff2cc;
+}
+
+tr:hover {
+  background: #ffe08a;
+}

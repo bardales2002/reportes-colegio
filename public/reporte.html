@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ingresar Reporte</title>
+  <link rel="stylesheet" href="/css/alumnos.css"> <!-- estilos generales -->
+  <link rel="stylesheet" href="/css/reporte.css">  <!-- estilos específicos -->
+</head>
+<body>
+  <button class="back-btn" onclick="window.location.href='reportes-grado.html'">⬅ Volver</button>
+
+  <main class="reporte-container">
+    <h1 id="titulo-reporte">Ingresar Reporte</h1>
+    <form id="reporteForm">
+<select id="selectAlumno"></select>
+        <option value="">Seleccione un alumno</option>
+      </select>
+      <textarea id="textoReporte" placeholder="Escriba el reporte..." required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <script src="/js/reporte.js"></script>
+</body>
+</html>

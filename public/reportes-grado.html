@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seleccionar grado</title>
+  <link rel="stylesheet" href="/css/alumnos.css">
+</head>
+<body>
+  <button class="back-btn" onclick="window.location.href='/dashboard.html'">⬅ Volver</button>
+
+  <main class="grado-container">
+    <h1>Selecciona un grado</h1>
+    <div class="grado-cards">
+      <div class="grado-card" onclick="seleccionarGrado('Primero Básico')">Primero Básico</div>
+      <div class="grado-card" onclick="seleccionarGrado('Segundo Básico')">Segundo Básico</div>
+      <div class="grado-card" onclick="seleccionarGrado('Tercero Básico')">Tercero Básico</div>
+    </div>
+  </main>
+
+  <script>
+    function seleccionarGrado(grado) {
+      // Aquí en lugar de alumno.html mandamos al formulario de reportes
+      window.location.href = `reporte.html?grado=${encodeURIComponent(grado)}`;
+    }
+  </script>
+</body>
+</html>

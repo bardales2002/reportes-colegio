@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de alumnos</title>
+  <link rel="stylesheet" href="/css/alumnos.css">
+</head>
+<body>
+  <button class="back-btn" onclick="window.location.href='grado.html'">⬅ Volver</button>
+
+  <main class="alumno-container">
+    <h1 id="titulo-grado">Gestión de Alumnos</h1>
+
+    <form id="alumnoForm">
+      <input type="text" id="codigo" placeholder="Código de estudiante">
+      <input type="text" id="nombres" placeholder="Nombres">
+      <input type="text" id="apellidos" placeholder="Apellidos">
+      <button id="btnAgregar">Agregar Alumno</button>
+      <button id="btnActualizar" style="display:none;">Actualizar Alumno</button>
+    </form>
+
+    <div class="tabla-container">
+      <h2>Lista de alumnos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaAlumnos"><!-- 👈 Aquí debe ir el id correcto --></tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="/js/alumnos.js"></script>
+</body>
+</html>

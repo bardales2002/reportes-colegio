@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historial de Reportes</title>
+  <link rel="stylesheet" href="/css/reportes.css">
+</head>
+<body>
+  <button class="back-btn" onclick="window.location.href='ver-reportes.html'">⬅ Volver</button>
+
+  <main class="alumno-container">
+    <h1 id="titulo-reporte">Historial de Reportes</h1>
+
+    <!-- Seleccionar alumno -->
+    <label for="selectAlumno">Selecciona un alumno</label>
+    <select id="selectAlumno"></select>
+
+    <!-- Buscar por fecha -->
+    <div class="busqueda-fecha">
+      <label for="fechaBuscar">Buscar por fecha</label>
+      <input type="date" id="fechaBuscar">
+      <button id="btnBuscarFecha">Buscar</button>
+    </div>
+
+    <!-- Historial -->
+    <div class="tabla-container">
+  <h2>Historial de Reportes</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Motivo</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+      </tr>
+    </thead>
+    <tbody id="tablaReportes">
+      <!-- Se llena dinámicamente -->
+    </tbody>
+  </table>
+</div>
+
+  </main>
+
+  <script src="/js/ver-reportes-alumno.js"></script>
+</body>
+</html>

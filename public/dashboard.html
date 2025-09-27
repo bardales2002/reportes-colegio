@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+  <button id="logoutBtn">Cerrar sesión</button>
+  <div id="currentUser"></div>
+
+  <main>
+    <div class="dashboard-box">
+      <h1>Gestión de reportes</h1>
+      <div class="card-container">
+        <!-- Botones visibles para todos -->
+       <div class="card" id="btn-reporte">
+  <img src="/img/add.png" alt="Agregar">
+  <p id="texto-reporte">Agregar reporte</p>
+</div>
+        <div class="card" id="btn-alumno">
+          <img src="/img/student.png" alt="Alumno">
+          <p>Ingresar alumno</p>
+        </div>
+
+        <!-- Solo admin -->
+        <div class="card admin-only" id="btn-historial">
+          <img src="/img/history.png" alt="Historial">
+          <p>Historial de reportes</p>
+        </div>
+
+        <div class="card admin-only" id="btn-imprimir">
+          <img src="/img/print.png" alt="Imprimir">
+          <p>Imprimir reportes</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Colegio de Ciencias Comerciales El Progreso
+  </footer>
+
+  <div class="logo-corner">
+    <img src="img/logo.jpeg" alt="Logo">
+  </div>
+
+<script src="/js/dashboard.js"></script>
+</body>
+</html>

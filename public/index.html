@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo-container">
+      <img src="img/logo.jpeg" alt="Logo">
+    </div>
+    <h2>Iniciar Sesión</h2>
+
+    <!-- 🔹 IMPORTANTE: el form SIN action ni method, todo lo maneja index.js -->
+<form id="loginForm" onsubmit="return false;">
+  <label for="correo">Usuario</label>
+  <input type="email" id="correo" name="correo" required>
+
+  <label for="contrasena">Contraseña</label>
+  <input type="password" id="contrasena" name="contrasena" required>
+
+  <button type="submit">Ingresar</button>
+  <div id="errorMsg" class="error-msg"></div>
+</form>
+
+
+    <p>No existe opción de crear cuenta. Consulte al administrador.</p>
+  </div>
+<script src="/js/index.js"></script>
+</body>
+</html>

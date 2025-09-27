@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ef8d24 0%, #fda085 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.back-btn {
+  align-self: flex-start;
+  margin: 15px;
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.back-btn:hover {
+  background: #555;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #222;
+}
+
+.grado-container {
+  margin-top: 60px;
+}
+
+.grado-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.grado-card {
+  background: #f4c542;
+  padding: 30px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.grado-card:hover {
+  background: #f7d96d;
+  transform: translateY(-5px);
+}
+
+.alumno-container {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 800px;
+  background: #fff7d6;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.2);
+}
+
+#alumnoForm {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#alumnoForm input, #alumnoForm button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+#alumnoForm button {
+  background: orange;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#alumnoForm button:hover {
+  background: darkorange;
+}
+
+.tabla-container {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: #f4c542;
+}
+
+td button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.edit-btn {
+  background: #28a745;
+  color: white;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #218838;
+}
+
+.delete-btn:hover {
+  background: #c82333;
+}
+
+@media (max-width: 768px) {
+  .form-alumnos {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-alumnos input,
+  .form-alumnos button {
+    width: 100%;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  td, th {
+    padding: 6px;
+  }
+}
+#btnAgregar {
+  background: orange;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+#btnAgregar:hover {
+  background: darkorange;
+}

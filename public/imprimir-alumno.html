@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Imprimir Reportes</title>
+  <link rel="stylesheet" href="css/imprimir.css">
+</head>
+<body>
+  <button class="back-btn" onclick="window.location.href='imprimir-grado.html'">⬅ Volver</button>
+  <main class="alumno-container">
+    <h1>Imprimir Reportes</h1>
+
+    <label for="selectAlumno">Selecciona un alumno</label>
+    <select id="selectAlumno"></select>
+
+    <div class="busqueda-fecha">
+      <label for="fechaBuscar">Buscar por fecha</label>
+      <input type="date" id="fechaBuscar">
+      <button id="btnBuscarFecha">Buscar</button>
+    </div>
+
+    <div class="acciones-export">
+      <button id="btnPDF">📄 Exportar a PDF</button>
+      <button id="btnExcel">📊 Exportar a Excel</button>
+      <button id="btnPrint">🖨️ Imprimir</button>
+    </div>
+
+    <div class="tabla-container">
+      <h2>Historial de Reportes</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Motivo</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+          </tr>
+        </thead>
+        <tbody id="tablaReportes"></tbody>
+      </table>
+    </div>
+  </main>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="js/imprimir-alumno.js"></script>
+</body>
+</html>
